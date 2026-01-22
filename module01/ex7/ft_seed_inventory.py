@@ -1,12 +1,13 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    ft_seed_inventory.py                               :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: jtardieu <jtardieu@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/01/21 17:42:09 by jtardieu          #+#    #+#              #
-#    Updated: 2026/01/21 17:42:10 by jtardieu         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+def ft_seed_inventory(seed_type: str, quantity: int, unit: str):
+    table = {"packets": f"{quantity} packets available",
+             "grams": f"{quantity} grams total",
+             "area": f"covers {quantity} square meters"}
 
+    if unit in table:
+        print(seed_type.capitalize(), "seeds :", table[unit])
+
+    else:
+        print("Unknown unit type")
+
+
+ft_seed_inventory(input(), int(input()), input())

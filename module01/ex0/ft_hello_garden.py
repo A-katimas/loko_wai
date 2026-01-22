@@ -1,21 +1,5 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    ft_hello_garden.py                                 :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: jtardieu <jtardieu@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/01/21 17:39:22 by jtardieu          #+#    #+#              #
-#    Updated: 2026/01/21 18:01:43 by jtardieu         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 def ft_hello_garden():
-	print("hello")
+    print("Hello, Garden Community!")
 
 
-def main():
-    ft_hello_garden()
-
-if __name__ == "__main__":
-	main()
+ft_hello_garden()
