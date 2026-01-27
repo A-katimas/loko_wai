@@ -3,18 +3,18 @@
 #                                                         :::      ::::::::    #
 #    ft_plant_factory.py                                :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jtardieu <jtardieu@student.42.fr>          +#+  +:+       +#+         #
+#    By: jtardieu <jtardieu@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/22 17:01:34 by jtardieu          #+#    #+#              #
-#    Updated: 2026/01/22 17:22:56 by jtardieu         ###   ########.fr        #
+#    Updated: 2026/01/25 14:18:37 by jtardieu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 class Plant:
     def __init__(self, name ,starting_height ,starting_age):
         self.name = name
-        self.starting_height= starting_height
-        self.starting_age =starting_age
+        self.starting_height = starting_height
+        self.starting_age = starting_age
         print(f"Created: {self}")
 
     def older(self):
