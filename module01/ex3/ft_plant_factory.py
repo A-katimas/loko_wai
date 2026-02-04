@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    ft_plant_factory.py                                :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jtardieu <jtardieu@student.42mulhouse.f    +#+  +:+       +#+         #
+#    By: jtardieu <jtardieu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/22 17:01:34 by jtardieu          #+#    #+#              #
-#    Updated: 2026/01/25 14:18:37 by jtardieu         ###   ########.fr        #
+#    Updated: 2026/02/04 17:24:06 by jtardieu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,11 +26,6 @@ class Plant:
 
     def __repr__(self):
         return (f"{self.name} ({self.starting_height}cm, {self.starting_age} days)")
-
-
-
-
-
 
 def main():
     jardin = [Plant("Rose", 25, 30),
