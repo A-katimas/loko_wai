@@ -1,5 +1,7 @@
 class GardenManager():
     garden_list = [];
+    def __init__(self,name):
+        self.name = name;
     class GardenStats():
         @staticmethod
         def  count_plants(garden):
@@ -12,6 +14,8 @@ class GardenManager():
             return 1;
 
     def add_garden(self ,garden):
+        GardenManager.garden_list.append(garden)
+        print("lqs  ")
         return()
     def remove_garden(self ,garden):
         return()
@@ -21,6 +25,7 @@ class GardenManager():
     def create_garden_network(cls):
         return()
     def utils_validate_name(self):
+        GardenManager.GardenStats.count_by_type
         return()
 
 class Garden():
@@ -29,6 +34,7 @@ class Garden():
         self.plants = plants
 
     def add_plant(self, plant):
+        GardenManager.add_garden(self)
         return(plant)
 
     def remove_plant(self, plant):
@@ -63,8 +69,12 @@ class PrizeFlower(FloweringPlant):
         return 1;
 
 def main():
-    rose = PrizeFlower(75, "rose" , 5 , "rose" , "spring")
-
+    thefirst = GardenManager("helloworld")
+    jardin_alice = [
+        PrizeFlower(75, "rose" , 5 , "rose" , "spring")
+        ]
+    alice = Garden("alice",jardin_alice);
+    thefirst.add_garden(alice)
 
 if __name__ == "__main__" :
     main()
