@@ -7,10 +7,15 @@ class GardenManager:
     class GardenStats:
         @staticmethod
         def count_plants(garden):
+            print("have ", len(garden.plants), f"plant in garden")
             return 1
 
         @staticmethod
         def count_by_type(garden):
+
+            flowering
+            prize
+            plant
             return 1
 
         @staticmethod
@@ -34,15 +39,16 @@ class GardenManager:
         return ()
 
     def get_global_stats(self):
-        print(f"=🌱 {self.name} list 🌱=")
+        print(f"\n==🌱 {self.name} list 🌱==")
         for garden in self.garden_list:
             print(f"{garden.name}")
-        print("==============")
+            GardenManager.GardenStats.count_plants(garden)
+        print("============\n")
         return ()
 
     @classmethod
-    def create_garden_network(cls):
-        return ()
+    def create_garden_network(cls, gardens):
+        return (cls(garden) for garden in gardens)
 
     def utils_validate_name(self):
         GardenManager.GardenStats.count_by_type()
@@ -64,11 +70,18 @@ class Garden:
         print(f"{plant.name} have been removed")
 
     def get_stats(self):
-        print(f"== plant in {self.name} ==")
+        print(f"\n=== plant in {self.name} ===")
         for plant in self.plants:
             print(f"{plant}")
-        print("==============")
+        print("============\n")
         pass
+
+    def Garden_Helping(self):
+        print("\n==🩹 Garden Help 🩹==")
+        print(f"{self.name} helping all plant")
+        for plant in self.plants:
+            plant.grow()
+        print("============\n")
 
 
 class Plant:
@@ -112,6 +125,8 @@ class PrizeFlower(FloweringPlant):
 
 
 def main():
+
+    print(" === Garden Management System Demo === ")
     Hello_Garden = GardenManager("Hello_Garden")
     jardin_alice = [
         PrizeFlower(75, "oxalys", 5, "red", "spring"),
@@ -128,13 +143,19 @@ def main():
     ]
     alice = Garden("alice_garden🌺", jardin_alice)
     ben = Garden("ben_garden🌸", jardin_ben)
+
     Hello_Garden.add_garden(alice)
     Hello_Garden.add_garden(ben)
+
     alice.add_plant(Plant("oack", 35))
+    alice.Garden_Helping()
     Hello_Garden.get_global_stats()
-    alice.remove_plant(jardin_alice[1])
+    alice.remove_plant(jardin_alice[6])
     alice.get_stats()
     ben.get_stats()
+    gardens: list[GardenManager] = GardenManager.create_garden_network(
+        ["first", "second"]
+    )
 
 
 if __name__ == "__main__":
