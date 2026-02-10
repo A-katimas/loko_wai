@@ -124,7 +124,7 @@ def main():
     jardin_ben = [
         Plant("fleur", 30),
         FloweringPlant("violette", 20, "purpel", "spring"),
-        PrizeFlower("sakura", 2, "pink", "sumer", 500),
+        PrizeFlower(500, "sakura", 2, "pink", "sumer"),
     ]
     alice = Garden("alice_garden🌺", jardin_alice)
     ben = Garden("ben_garden🌸", jardin_ben)
