@@ -1,5 +1,5 @@
 def test_temperature_input(temp_str: str):
-    if temp_str.isdigit():
+    if temp_str.isdigit() or temp_str[0] == "-":
         if int(temp_str) < 0:
             return f"Error: {temp_str}°C is too cold for plants (min 0°C)"
         elif int(temp_str) > 40:
