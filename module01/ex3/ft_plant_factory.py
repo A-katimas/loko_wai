@@ -14,8 +14,8 @@ class Plant:
 
     def __repr__(self) -> str:
         return (
-            f"{self.name} ",
-            f"({self.starting_height}cm," f"{self.starting_age}days)",
+            f"{self.name} "
+            f"({self.starting_height}cm, {self.starting_age}days)"
         )
 
 
