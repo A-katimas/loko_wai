@@ -1,4 +1,4 @@
-def ft_plant_age():
+def ft_plant_age() -> None:
     var = int(input("Days since last watering: "))
 
     if var >= 4:

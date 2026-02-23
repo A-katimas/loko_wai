@@ -8,40 +8,29 @@ class Plant:
         Plant.__instance.append(self)
         print(f"{self}")
 
-    def older(self):
+    def older(self) -> None:
         self.grow()
         self.set_age(int(self.age) + int(1))
 
-    def grow(self):
+    def grow(self) -> None:
         self.set_height(int(self.height) + int(1))
 
-    def set_height(self, new_height):
+    def set_height(self, new_height) -> None:
         self.height = new_height
 
-    def set_age(self, new_age):
+    def set_age(self, new_age) -> None:
         self.age = new_age
 
-    def set_name(self, name):
+    def set_name(self, name) -> None:
         self.name = name
 
     @classmethod
-    def print_instance(cls):
+    def print_instance(cls) -> None:
         for plant in Plant.__instance:
-            print(
-                f"Current {"".join(list(reversed(plant.__class__.__name__)))
-                .capitalize()}:",
-                plant.name,
-                f"({plant.height}cm, {plant.age} days)",
-            )
+            t = "".join(list(reversed(plant.__class__.__name__))).capitalize()
+            print(f"Current {t}:", plant.name,
+                  f"({plant.height}cm, {plant.age} days)")
         print("\n")
-
-    def __repr__(self):
-        table = {
-            "flower": f"{1} is blowmingh",
-            "tree": f"{1} provide shadow ",
-            "vegetabels": f"covers {1} is rich on viutamin d",
-        }
-        return ""
 
 
 class Flower(Plant):
@@ -56,7 +45,7 @@ class Flower(Plant):
         return f"{self.name} is blooming beautifully!"
 
     @classmethod
-    def print_instance(cls):
+    def print_instance(cls) -> None:
         for flower in cls.__instance_flower:
             print(
                 f"Current {flower.__class__.__name__}:",
@@ -68,7 +57,7 @@ class Flower(Plant):
     def __repr__(self) -> str:
         return (
             f"{self.name} (Flower): {self.height}cm, {self.age} days, "
-            "{self.color} color"
+            f"{self.color} color"
         )
 
 
@@ -82,16 +71,15 @@ class Tree(Plant):
 
     def produce_shade(self) -> str:
         return (
-            f"Oak provides {(self.diameter ** 2)*0.0312}",
-            " square meters of shade",
+            f"{self.name} provides {(self.diameter ** 2)*0.0312}"
+            "square meters of shade"
         )
 
     @classmethod
-    def print_instance(cls):
+    def print_instance(cls) -> None:
         for tree in cls.__instance_tree:
             print(
-                f"Current {tree.__class__.__name__}:",
-                tree.name,
+                f"Current {tree.__class__.__name__}:", tree.name,
                 f"({tree.height}cm, {tree.age} days)",
             )
         print("\n")
@@ -106,9 +94,8 @@ class Tree(Plant):
 class Vegetable(Plant):
     __instance_Vegetable = []
 
-    def __init__(
-        self, name, starting_height, starting_age, harvest_season, nutritional_value
-    ):
+    def __init__(self, name, starting_height, starting_age,
+                 harvest_season, nutritional_value):
         self.harvest_season = harvest_season
         self.nutritional_value = nutritional_value
         super().__init__(name, starting_height, starting_age)
@@ -118,7 +105,7 @@ class Vegetable(Plant):
         return f"{self.name} is rich in {self.nutritional_value}"
 
     @classmethod
-    def print_instance(cls):
+    def print_instance(cls) -> None:
         for vegetable in cls.__instance_Vegetable:
             print(
                 f"Current {vegetable.__class__.__name__}:",

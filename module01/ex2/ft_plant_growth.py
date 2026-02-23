@@ -6,15 +6,15 @@ class Plant:
         self.age = age
         self.growsave = growsave
 
-    def older(self):
+    def older(self) -> None:
         self.grow()
         self.age += 1
 
-    def grow(self):
+    def grow(self) -> None:
         self.height += 1
         self.growsave += 1
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"{self.name}: {self.height}cm, {self.age} days old"
 
 

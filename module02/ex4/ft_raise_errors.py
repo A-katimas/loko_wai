@@ -17,12 +17,12 @@ def check_plant_health(plant_name, water_level, sunlight_hours):
 
 class Garden_Error(Exception):
     def __init__(self, message: str = " garden"):
-        super().__init__(f"{message}")
+        super().__init__(message)
 
 
 class Plant_Error(Garden_Error):
     def __init__(self):
-        super().__init__(f" Plant name cannot be empty!🔴")
+        super().__init__(" Plant name cannot be empty!🔴")
 
 
 class Water_Error(Garden_Error):
@@ -70,8 +70,9 @@ def main():
 
     try:
         try:
-            print(f"Checking (nothing)...")
-            check_plant_health(plant_name=None, water_level=4, sunlight_hours=4)
+            print("Checking (nothing)...")
+            check_plant_health(plant_name=None, water_level=4,
+                               sunlight_hours=4)
         except Garden_Error as e:
             print("\033[31mError\033[0m:", e)
             print("Next plant ➡️\n")

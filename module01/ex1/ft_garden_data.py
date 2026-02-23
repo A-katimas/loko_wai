@@ -4,7 +4,7 @@ class Plant:
         self.Height = height
         self.age = age
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"{self.name}: {self.Height}cm, {self.age} days old"
 
 

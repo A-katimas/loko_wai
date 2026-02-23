@@ -5,15 +5,18 @@ class Plant:
         self.starting_age = starting_age
         print(f"Created: {self}")
 
-    def older(self):
+    def older(self) -> None:
         self.grow()
         self.starting_age += 1
 
-    def grow(self):
+    def grow(self) -> None:
         self.starting_height += 1
 
-    def __repr__(self):
-        return f"{self.name} ({self.starting_height}cm, {self.starting_age}days)"
+    def __repr__(self) -> str:
+        return (
+            f"{self.name} ",
+            f"({self.starting_height}cm," f"{self.starting_age}days)",
+        )
 
 
 def main():
@@ -24,6 +27,7 @@ def main():
         Plant("Sunflower", 80, 45),
         Plant("Fern", 15, 120),
     ]
+    jardin[0].grow()
 
 
 if __name__ == "__main__":

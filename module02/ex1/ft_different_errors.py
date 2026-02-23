@@ -3,7 +3,7 @@ def garden_operations(error_type):
         int("abc")  # ValueError
 
     elif error_type == "zero":
-        a = 10 / 0  # ZeroDivisionError
+        10 / 0  # ZeroDivisionError
 
     elif error_type == "file":
         open("missing.txt", "r")  # FileNotFoundError

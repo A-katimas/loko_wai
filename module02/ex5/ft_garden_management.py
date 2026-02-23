@@ -25,7 +25,7 @@ class Min_Sunlight_Error(Garden_Error):
 
 class Water_Tank_Error(Garden_Error):
     def __init__(self):
-        super().__init__(f"Not enough water in tank 🔴")
+        super().__init__("Not enough water in tank 🔴")
 
 
 class Plant:
@@ -96,7 +96,8 @@ class GardenManager:
                         check_water(plant.water)
                         print(f"Watering {plant.name} - success 🌱")
                     except Water_Error as e:
-                        print(f"\033[31mError\033[0m : watering {plant.name}: {e}")
+                        print("\033[31mError\033[0m : "
+                              f"watering {plant.name}: {e}")
                     self.lvl_water -= 1
                     plant.water += 1
                 except Water_Tank_Error as e:

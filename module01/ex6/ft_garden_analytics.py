@@ -6,48 +6,47 @@ class GardenManager:
 
     class GardenStats:
         @staticmethod
-        def count_plants(garden):
-            return(f"have  {len(garden.plants)} plant in garden")
+        def count_plants(garden) -> str:
+            return f"have  {len(garden.plants)} plant in garden"
 
         @staticmethod
-        def count_by_type(garden):
+        def count_by_type(garden) -> str:
             pla = 0
             flower = 0
             prize = 0
             for plant in garden.plants:
-                if isinstance(plant, PrizeFlower) :
-                    prize +=1
-                elif isinstance(plant , FloweringPlant) :
-                    flower+=1
-                elif isinstance(plant, Plant) :
-                    pla+=1;
-            return f"Plant: {pla} Flowering Plant: {flower} PrizeFlower: {prize}"
+                if isinstance(plant, PrizeFlower):
+                    prize += 1
+                elif isinstance(plant, FloweringPlant):
+                    flower += 1
+                elif isinstance(plant, Plant):
+                    pla += 1
+            return (f"Plant: {pla} Flowering Plant: {flower} "
+                    f"PrizeFlower: {prize}")
 
         @staticmethod
-        def average_score(garden):
+        def average_score(garden) -> str:
             score = 0
             for plant in garden.plants:
                 if isinstance(plant, PrizeFlower):
-                    score += plant.prize_points;
-            return(f"{garden.name} have {score} garden point");
+                    score += plant.prize_points
+            return f"{garden.name} have {score} garden point"
 
-    def add_garden(self, garden):
+    def add_garden(self, garden) -> None:
         self.garden_list.append(garden)
         print(
             f"the garden : --{garden.name}-- have been add to",
             f"--{self.name}-- manageur",
         )
-        return ()
 
-    def remove_garden(self, garden):
+    def remove_garden(self, garden) -> None:
         print(
             f"the garden : --{garden.name}- have been removed to",
             f"--{self.name}-- manageur",
         )
         self.garden_list.remove(garden)
-        return ()
 
-    def get_global_stats(self):
+    def get_global_stats(self) -> None:
         print(f"\n==🌱 {self.name} list 🌱==")
         for garden in self.garden_list:
             print(f"✨{garden.name}✨")
@@ -55,15 +54,13 @@ class GardenManager:
             print(f"  {GardenManager.GardenStats.count_by_type(garden)}")
             print(GardenManager.GardenStats.average_score(garden))
         print("============\n")
-        return ()
 
     @classmethod
-    def create_garden_network(cls, gardens):
-        return (cls(garden) for garden in gardens)
+    def create_garden_network(cls, gardens) -> list["GardenManager"]:
+        return [cls(garden) for garden in gardens]
 
-    def utils_validate_name(self):
+    def utils_validate_name(self) -> None:
         GardenManager.GardenStats.count_by_type()
-        return ()
 
 
 class Garden:
@@ -71,23 +68,23 @@ class Garden:
         self.name = name
         self.plants = plants
 
-    def add_plant(self, plant):
+    def add_plant(self, plant) -> "Plant":
         self.plants.append(plant)
         print(f"{plant.name} have been add to the garden")
         return plant
 
-    def remove_plant(self, plant):
+    def remove_plant(self, plant) -> None:
         self.plants.remove(plant)
         print(f"{plant.name} have been removed")
 
-    def get_stats(self):
+    def get_stats(self) -> None:
         print(f"\n=== plant in {self.name} ===")
         for plant in self.plants:
             print(f"{plant}")
         print("============\n")
         pass
 
-    def Garden_Helping(self):
+    def Garden_Helping(self) -> None:
         print("\n==🩹 Garden Help 🩹==")
         print(f"{self.name} helping all plant")
         for plant in self.plants:
@@ -100,11 +97,11 @@ class Plant:
         self.name = name
         self.age = age
 
-    def grow(self):
+    def grow(self) -> str:
         print(f"{self.name} grew 1cm")
         self.age += 1
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"{self.name}: {self.age}cm"
 
 
@@ -114,24 +111,25 @@ class FloweringPlant(Plant):
         self.season = season
         super().__init__(name, age)
 
-    def bloom(self):
+    def bloom(self) -> str:
         return f"{self.flower_color} flowers (blooming)"
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return super().__repr__() + ", " + self.bloom()
 
 
 class PrizeFlower(FloweringPlant):
     def __init__(
-        self, prize_points: int, name: str, age: int, flower_color: str, season: str
+        self, prize_points: int, name: str, age: int,
+        flower_color: str, season: str
     ):
         self.prize_points = prize_points
         super().__init__(name, age, flower_color, season)
 
-    def get_point(self):
+    def get_point(self) -> str:
         return f"prize point : {self.prize_points}"
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return super().__repr__() + ", " + self.get_point()
 
 
@@ -164,9 +162,11 @@ def main():
     alice.remove_plant(jardin_alice[6])
     alice.get_stats()
     ben.get_stats()
+
     gardens: list[GardenManager] = GardenManager.create_garden_network(
         ["first", "second"]
     )
+    gardens[0].add_garden(Garden("robert", jardin_alice))
 
 
 if __name__ == "__main__":
