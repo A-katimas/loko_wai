@@ -32,14 +32,14 @@ class speed_demon(Success):
 
 
 class Player:
-    def __init__(self, name):
+    def __init__(self, name : str):
         self.achievements = set()
         self.name = name
 
-    def add_success(self, success: Success):
+    def add_success(self, success: Success) -> None:
         self.achievements.add(success.name)
 
-    def call_success(self):
+    def call_success(self) -> None:
         print(f"Player {self.name} achievements: {self.achievements}")
 
 

@@ -16,7 +16,7 @@ class Item:
 
 # --- Class Inventory ---
 class Inventory:
-    def __init__(self, items):
+    def __init__(self, items : int):
         self.items = items
 
     def total_items(self):
@@ -26,7 +26,7 @@ class Inventory:
         return len(self.items)
 
 # --- fonction parcing ---
-def parse_inventory(args):
+def parse_inventory(args :str):
     inventory = []
     for arg in args:
         if ":" not in arg:
