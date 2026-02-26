@@ -32,7 +32,6 @@ def main():
     spawn = Player("0,0,0")
 
     player1 = Player("1,2,3")
-    # Create position
     position = (10, 20, 5)
     print(f"Position created: {position}")
 
@@ -41,7 +40,6 @@ def main():
         f"{player1.position}: {player1.find_other(spawn.position)}"
     )
 
-    # Parse valid coordinates
     player2 = Player("1,2,43")
     print(f'Parsing coordinates: "{player2.position}"')
     parsed = parse_coordinates("1,2,43")
@@ -54,13 +52,11 @@ def main():
             f"{player2.find_other(spawn.position)}"
         )
 
-        # Tuple unpacking
         print("Unpacking demonstration:")
         x, y, z = parsed
         print(f"Player at x={x}, y={y}, z={z}")
         print(f"Coordinates: X={x}, Y={y}, Z={z}")
 
-    # Parse invalid coordinates
     invalid_str = "abc,def,ghi"
     print(f'\nParsing invalid coordinates: "{invalid_str}"')
     parse_coordinates(invalid_str)
