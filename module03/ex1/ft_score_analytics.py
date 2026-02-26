@@ -5,7 +5,10 @@ def main():
     print("=== Player Score Analytics ===")
 
     if len(sys.argv) < 2:
-        print(f"No scores provided. Usage: python3 {sys.argv[0]} <score1> <score2> ...")
+        print(
+            f"No scores provided. Usage: python3 {sys.argv[0]} ",
+            "<score1> <score2> ...",
+        )
 
     else:
         nombres = sys.argv[1:]

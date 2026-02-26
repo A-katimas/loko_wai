@@ -11,7 +11,7 @@ class Success:
         Success._call_count[self.name] += 1
 
     @classmethod
-    def stats(cls):
+    def stats(cls) -> dict:
         return cls._call_count
 
 
@@ -32,7 +32,7 @@ class speed_demon(Success):
 
 
 class Player:
-    def __init__(self, name : str):
+    def __init__(self, name: str):
         self.achievements = set()
         self.name = name
 

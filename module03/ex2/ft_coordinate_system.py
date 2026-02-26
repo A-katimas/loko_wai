@@ -6,7 +6,7 @@ class Player:
         pos = parse_coordinates(position)
         self.position = pos
 
-    def find_other(self, spawn: tuple):
+    def find_other(self, spawn: tuple) -> None:
         print(round(distance_3d(self.position, spawn), 2))
 
 
@@ -37,7 +37,8 @@ def main():
     print(f"Position created: {position}")
 
     print(
-        f"Distance between {spawn.position} and {player1.position}: {player1.find_other(spawn.position)}"
+        f"Distance between {spawn.position} and "
+        f"{player1.position}: {player1.find_other(spawn.position)}"
     )
 
     # Parse valid coordinates
@@ -47,9 +48,10 @@ def main():
 
     if parsed:
         print(f"Parsed position: {parsed}")
-        dist = distance_3d(spawn.position, parsed)
+        distance_3d(spawn.position, parsed)
         print(
-            f"Distance between {spawn.position} and {parsed}: {player2.find_other(spawn.position)}"
+            f"Distance between {spawn.position} and {parsed}: "
+            f"{player2.find_other(spawn.position)}"
         )
 
         # Tuple unpacking

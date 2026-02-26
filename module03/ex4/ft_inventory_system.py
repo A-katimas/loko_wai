@@ -1,5 +1,6 @@
 import sys
 
+
 # --- Class Item ---
 class Item:
     list_item = {}
@@ -10,23 +11,26 @@ class Item:
         Item.list_item[self.name] = Item.list_item.get(self.name, 0) + number
 
     @classmethod
-    def sort_item(cls):
-        sorted_items = sorted(cls.list_item.items(), key=lambda x: x[1], reverse=True)
+    def sort_item(cls) -> dict:
+        sorted_items = sorted(cls.list_item.items(),
+                              key=lambda x: x[1], reverse=True)
         return sorted_items
+
 
 # --- Class Inventory ---
 class Inventory:
-    def __init__(self, items : int):
+    def __init__(self, items: int):
         self.items = items
 
-    def total_items(self):
+    def total_items(self) -> int:
         return sum(item.number for item in self.items)
 
-    def unique_item_types(self):
+    def unique_item_types(self) -> int:
         return len(self.items)
 
+
 # --- fonction parcing ---
-def parse_inventory(args :str):
+def parse_inventory(args: str) -> list:
     inventory = []
     for arg in args:
         if ":" not in arg:
@@ -38,6 +42,7 @@ def parse_inventory(args :str):
             continue
         inventory.append(Item(name, qty))
     return inventory
+
 
 # --- Fonction main ---
 def main():
@@ -54,7 +59,10 @@ def main():
 
     print("=== Current Inventory ===")
     for name, qty in Item.sort_item():
-        percent = (qty / inventory.total_items()) * 100 if inventory.total_items() > 0 else 0
+        percent = (
+            (qty / inventory.total_items()) * 100
+            if inventory.total_items() > 0 else 0
+        )
         print(f"{name}: {qty} units ({percent:.1f}%)")
 
     print("=== Inventory Statistics ===")
@@ -85,8 +93,10 @@ def main():
 
     print("=== Dictionary Properties Demo ===")
     print("Dictionary keys:", ", ".join(Item.list_item.keys()))
-    print("Dictionary values:", ", ".join(str(v) for v in Item.list_item.values()))
+    print("Dictionary values:",
+          ", ".join(str(v) for v in Item.list_item.values()))
     print("Sample lookup - 'sword' in inventory:", "sword" in Item.list_item)
+
 
 if __name__ == "__main__":
     main()
