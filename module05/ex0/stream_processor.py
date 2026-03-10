@@ -18,7 +18,7 @@ class DataProcessor(ABC):
 
 class NumericProcessor(DataProcessor):
 
-    def process(self, data: any):
+    def process(self, data: any) -> str:
         som = sum(data)
         moy = sum(data) / len(data)
         return (
@@ -67,7 +67,7 @@ class LogProcessor(DataProcessor):
         pass
 
 
-def useobj(pros: DataProcessor, data: any):
+def useobj(pros: DataProcessor, data: any) -> None:
     print(f"Initializing {pros.__class__.__name__} ...")
     if pros.validate(data):
 

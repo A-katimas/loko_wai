@@ -5,7 +5,7 @@ class DataStream(ABC):
 
     def __init__(self, stream_id: str):
         self.stream_id: str = stream_id
-        self.total_processed: int = 0
+        self.total_processed_base: int = 0
 
     @abstractmethod
     def process_batch(self, data_batch: list[any]) -> str:
@@ -17,10 +17,17 @@ class DataStream(ABC):
         if not criteria:
             return data_batch
 
-        return [item for item in data_batch if criteria.lower() in str(item).lower()]
+        return [
+            item_filter
+            for item_filter in data_batch
+            if criteria.lower() in str(item_filter).lower()
+        ]
 
     def get_stats(self) -> dict[str, list[str, int, float]]:
-        return {"stream_id": self.stream_id, "total_processed": self.total_processed}
+        return {
+            "stream_id": self.stream_id,
+            "total_processed": self.total_processed_base,
+        }
 
 
 class SensorStream(DataStream):
@@ -105,7 +112,11 @@ class EventStream(DataStream):
             if not isinstance(data_batch, list):
                 raise ValueError("Invalid event batch")
 
-            errors = [event for event in data_batch if "error" in event.lower()]
+            errors = [
+                event_catch
+                for event_catch in data_batch
+                if "error" in event_catch.lower()
+            ]
 
             self.error_count = len(errors)
             self.total_processed += len(data_batch)
