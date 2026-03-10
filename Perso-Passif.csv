@@ -1,0 +1,119 @@
+Passif de Classe,,,,Passif de Division,,,,Passif secondaire,,
+Nom,Effet,Détails,,Nom,Effet,Détails,,Nom,Effet,Détails
+Patience,"Pendant que le perso bande son arc, peut dépenser des points Action Libre ou Utilitaire pour gagner +3 au test de viser (cumulable).",Archer voie de la précision,,Div 1,"+2 en observation , +2 en esquive et +2 deg
+par allié proche mort ou dans le coma pendant le
+combat",,,Archer d’élite,+2 au test de tir et +2 dég avec un arc,"Classe:
+Archer/Druide/Soldat/Troubadour"
+Flux triphasé,Gagne le triple de flèches créées par la magie ,Archer voie de l'archer magique,,Div 2 ,"Peut relancer le dé et donc annulé 
+l'ancien lancé (2 fois par session)",,,Artisan,+5 lors de la création d’objets.,"Classe:
+Toutes sauf Barbarde"
+Choupissson,+1 deg pour chaque flèche ayant touché l'ennemi,Archer voie du forceur,,Div 3,"+2 deg et si le personnage à fait un 19 ou 20
+ pour une attaque +15 deg en plus",,,Autisme assumé,"Lorsque le perso réussit à frapper 3 fois le même ennemi d'affilée, + 5 deg sur la dernière attaque. ","Classe:
+Épéiste/Paladins/Soldat/Druide/Barbarde"
+Chorégraphe,+2 au test pour lancer des compétences qui déplacent un allié. L'allié gagne +3 deg. (cumulable),Barbarde voie de la synergie,,Don d'Eugénie,"Obtient le passif Empathie:
+Le perso inflige la moitié (arondie au supérieur) des dégâts qu'elles subis par l’ennemie à ce dernier ( peut tuer l'attaquant)",,,Brisecrâne,Les attaque ignore 50% de l'armure quand le perso utilise un marteau,"Classe:
+Paladins"
+Insaisissable,+1 deg toutes les 2 esquives consécutives. Retour à 0 dès un échec ,Barbarde voie de l'acrobate,,Don de Némésis,"Obtient le passif Je suis où:
+Si les PV du perso tombent à 0, il revient avec la moitié de ses PV derrière l’ennemi qui l'a tué au prochain tour de table. 
+(1 fois par combat).
+",,,Champion hallebardier,"Après avoir réussi une attaque sur un ennemie avec une lance, peut reattaquer si il fait une réussite Dex","Classe:
+Druide/Soldat"
+Je suis une vraie Troubadoure,+5 deg sur la prochaine attaque après avoir blessé un allié,"Barbarde voie du 
+réinventeur de métier",,Don de Moro,"Obtient le passif Analyse:
+Si le perso et à son 3 tour de table en combats, le perso gagne +6 au test d'esquive.",,,Chance miraculeuse,Peut retenter un lancé de dé après un échec (critique non inclus) une fois par Combat.,"Classe:
+Voleur/Troubadour"
+Médecine alternative,+5 au test et +5 d'efficacité du soin en utilisant des plantes,Druide voie de la phytothérapie,,"Don Akatimas
+","Obtient le passif Pour les Caméras:
+Le perso est visiblement à l'agonie quand t'il fait nimporte qu'elle action et Régène 5 PV par tour",,,Concentration,Le perso peut dépenser nimporte qu'elle action pour gagner +1 au prochain test (cumulable),"Classe:
+Toutes sauf Barbarde"
+Prédateurs,+5 en Pistage d'ennemi et +3 deg sur la proie pistée pendant tout le combat,Druide voie du chasseur,,Don de Méa,"Obtient le passif Tout puissant:
+Le Perso ne peut plus subire de dég physique et Mental",,,Dagueur agile,+6 au test d'assasinat si le perso est équipé d'une dague,"Classe:
+Archer/Voleur"
+Métamorphe,"Capable de se transformer en animal. Pendant sa tranformation si les PV tombe à 0, alors le personnage retourne sous sa forme orginnelle avec 5 PV. (1 Transformation par Combat, et stats des transformation en annexe)",Druide voie du spiritualisme,,Don de Lu,"Obtient le passif Mirage:
+Les sort d'illusion ne coût pas de mana",,,Défense inespéré ,"Après que le perso utilise une compétence offensive, il gagne un bouclier magique qui lui fait ignoré 6 deg. Le perso doit avoir au moins 5 mana pour activer le passif","Classe: 
+Sorcier/Paladins/Healer"
+Adrénaline,"+6d dég 🎲 pour chaque attaque direct encaissée
+(Cumulable), s'estompe après une attaque. ",Épéiste voie de la claymore,,Don de Lily,"Obtient la compétence Hub:
+Peut invoquer un portail vers un espace unique où l'on peut mettre n'imporque quoi. La pièce existe même quand le portail n'est pas là et elle fait 12 m3. (12 mana)",,,Éclaireur,le perso possède un animal de compagnie qui stationne quelque part. Apporte des objets à proximité et peut partir en éclaireur.,"Classe:
+Archer/Druide/Voleur"
+Enchanteur,"Enchante une arme au premier touché :
+-Analyse: permet à chaque coup d’avoir des infos sur la cible
+-Tranchant élémentaire: inflige des dégâts élementaire  2 dég
+-Capture d’âme: pour chaque ennemi tué pendant le combat + 1 dég (les âmes s’évaporent à la fin du combat)",Épéiste voie de l'Enchantement,,Don de Pala,"Obtient le passif Intouchable:
+Esquive automatiquement les attaques directes mais le perso doit etre posture Dex ",,,Enchanteur,+1 PM tous les 2 tours. (pendant les combats),"Classe:
+Healer/Sorcier/Troubadour"
+Escrime,+3 au test d'esquive et +3 au test d'attaque,Épéiste voie de l'épé,,Don de Ferra,"Obtient le passif Courage:
+Le perso gagne +3 deg sur chaque attaque par ennemie détecter en combats",,,Épéiste émérite,+2 deg et +3 au test d'esquive quand le perso est équipé d'une épée,"Classe:
+Épéiste/Paladins/Soldat"
+Zone d'impact,"Sacrifie 2 dég pour faire des dég de zone (1-5m)
+avec une arme à feu",Flibustier voie de l'artillerie,,Don de Dera,"Obtient le passif Démonstration:
+Le perso gagne +3 deg sur chaque attaque pour chaque allié détecter en combats ",,,Exécuteur,Le perso gagne +3 mana et 2 PV  quand il tue un ennemie,"Classe:
+Toutes sauf Ingénieur/Sorcier/Healer"
+Localisation,"Cartographie la zone autour de lui (100 m) avec
+un test de sag, peut détecter les ennemis.",Flibustier voie du Pirate,,Don de Sionne,"Obtient le passif Double classe:
+Le perso peut chosire une classe en plus de celle qu'il a déjà.",,,Flagellateur,+1 AM et +3 au test d'esquive avec un fouet à la main,"Classe:
+Soldat/Troubadour"
+Tireur née,+2 au test de visée avec une arme à feu,Flibustier voie du Pistolero,,Don de Paul,"Obtient le passif Touche à tout:
+Le perso n'a aucune restriction de classe ",,,Flingueur,L'ennemie prend -2 AM quand il est blessé par une arme à feu,"Classe:
+Filbustier"
+Alchimiste,Effet des potions*5 et la possibilité de concoter des potions,Ingénieur voie de l'alchimiste,,,,,,Furi,"Après avoir été blessé, le perso fait un test Sag. Si le teste échou:
+Le personnage ne fait que des attaque directe, gagne +6 deg et  attaque les entités les plus proche. Refait un test de Sag chaque tour pour remprendre le contrôle
+","Classe:
+Toutes sauf Healer/Ingénieur/Sorcier/Voleur
+(Soldat voie du courage ne peut pas l'équiper non plus)"
+Je sais tout,Est premier au tour de table (choisie) et + 6 au test de savoir ,Ingénieur voie de l'intellectuelle,,,,,,Gâchette rapide,"Si le perso est équipé d'une arme à feu, peut transformé une AL en 2 AO ","Classe:
+Filbustier/Barbarde"
+Robotique,Capable de modifier et de réparer des systèmes robotiques avec un test de Sag,Ingénieur voie du mécanicien,,,,,,Guerrier-griffe,"Équipé de griffe/gant, le perso peut se déplacer au corps à corps d'un ennemi gratuitement (distance: 2 AM) et +3 deg si l'ennemi est en posture offensive.","Classe:
+Troubadour/Voleur/Barbarde"
+Maître arcaniste,+4 deg sur les sorts élèmentaires du personnage,Magicien voie de l'arcane,,,,,,Hacheur sanguinaire,+6 deg🎲 à chaque attaque réussi avec une hache,"Classe:
+Paladins/Soldat/Voleur"
+Avatar,Maîtrise les 4 élèments primaires et +4 deg lorsque le perso utilise un élèment opposé à l'adversaire pour attaquer,Magicien voie de l'élèmentaire,,,,,,Incantateur ,+2 au test de lancement de sors quand le perso est équipé d'un catalyseur,Catalyseur: Septre/Grimoire/Gemme/etc...               Classe : Healer/Sorcier/Troubadour
+Arcane perdu,"Peut utiliser des sorts non élèmentaires
+(-2 incantations)",Magicien voie de l'orginal,,,,,,Incantation rapide,Gagne une AL quand un sort est réussi. une fois par tour,"Classe:
+Sorcier"
+Solidarité,Gagne le nombre de dég 🎲 pour chaque PV Allié perdu,Paladins voie de la colère,,,,,,Intimidation,+2 au test d'intimidation,"Classe:
+Toutes "
+Bienfaiteur,+4 en Phy pour la défense d'un alliée,Paladins voie de l'héroïsme,,,,,,Modélisation,+ 2 au test pour la modification d'un item crée par magie ,"Classe:
+Archer/Druide/Sorcier"
+Supervision,"Chaque allié présent sur le champ de bataille
+gagne +3 d'éfficacité des soin et des buffs",Paladins voie du Leader,,,,,,Nyctalopie,Vision nocturne (+5 test observation dans le noir),"Classe:
+Toutes"
+Maître d'arme,"Ignore tous les malus d'équipement. De plus, Après avoir réussi une attaque sur un ennemi, il peut faire un test de Dex pour attaquer à noueau",Soldat voie de l'adaptation,,,,,,Perspicacité,+3 sur les tests consistant à découvrire un secret ,"Classe:
+Toutes"
+Havre sac,Inventaire illimité et +2 deg ,Soldat voie de l'écuyer,,,,,,Phare,Manifestation de Magie qui émet une lumière qui aide à voir mieux dans la pénombre.,"Classe:
+Toutes sauf Soldat"
+Volonté,Ignore tous les malus de contrôle mental et +1 deg pour chaque ennemi de trop par rapport à son équipe,Soldat voie du courage,,,,,,Porte-bouclier,Suprime une AL à l'ennemi si le perso utilise un bouclier pour attaquer,"Classe:
+Paladin"
+Hurleur,"Affaiblit les ennemis lorsqu'une compétence du personnage les blesse (+6 deg 🎲 uniquement au prochain coup sur l'ennemi, les alliés profitent du bonus).(non cumulable) ",Troubadour voie de la banshee,,,,,,Robuste,-2 deg reçus,"Classe:
+Paladins"
+Diva,Les compétences de soin et de buff deviennent des compétences de zone avec un +2 d'efficacité.,Troubadour voie de la berceuse,,,,,,Sabotage," Lorsque le perso fait une action en défaveur de son équipe, il gagne 1 point de sabotage (adaptable). Utilise 2 point de sobatage pour gagner +1 au prochain test  (cumulable jusqu'à 10). ","Classe:
+Toutes sauf Épéiste"
+Beau parleur,"+4 au test dicussion. (Négociation, Séduction, Intimidation,...)",Troubadour voie de l'éloquence,, ,,,,Samaritain,+3 sur les tests des actions de soutien.,"Classe:
+Toutes sauf Voleur"
+Assasin,+4 pour toute action réalisé en toute discrétion,Voleur voie des ombres,,,,,,Synchro arcanique,le perso peut prendre des dégâts magiques à la place de dégâts de santé.,"Classe:
+Ingénieur/Healer/Sorcier"
+Richesse inattendue,Gagne +150% d'argent que les autres,Voleur voie du bénéfice,,,,,,Pas de côté,Consomme 1 AM pour obtenir +2 au test d'esquive,"Classe:
+Barbarde/Troubadour/Voleur/Épéiste"
+Main de velour,+4 au test de vole à la tire ,Voleur voie du vole à la tire,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Métamorphe,,,,,,,,,
+Souris,5PV 0VA /Phy:10 Dex:90 Sag:80 / 2d🎲 deg ( sort dps div 4),,,,,,,,,
+Ours,20PV 8VA /Phy:90 Dex:70 Sag:20/ 8*2d🎲deg (Couts des sorts *2),,,,,,,,,
+Cheval,12PV 3VA/Phy:60 Dex 90 Sag:50/ 8d🎲deg (Incantation discrète),,,,,,,,,
