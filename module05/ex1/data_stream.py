@@ -1,10 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import List, Any, Optional, Dict, Union
 
-
-# ==========================
-# ABSTRACT BASE STREAM
-# ==========================
 
 class DataStream(ABC):
 
@@ -13,30 +8,20 @@ class DataStream(ABC):
         self.total_processed: int = 0
 
     @abstractmethod
-    def process_batch(self, data_batch: List[Any]) -> str:
+    def process_batch(self, data_batch: list[any]) -> str:
         pass
 
     def filter_data(
-        self,
-        data_batch: List[Any],
-        criteria: Optional[str] = None
-    ) -> List[Any]:
+        self, data_batch: list[any], criteria: list[str] = None
+    ) -> list[any]:
         if not criteria:
             return data_batch
 
-        # default filtering
         return [item for item in data_batch if criteria.lower() in str(item).lower()]
 
-    def get_stats(self) -> Dict[str, Union[str, int, float]]:
-        return {
-            "stream_id": self.stream_id,
-            "total_processed": self.total_processed
-        }
+    def get_stats(self) -> dict[str, list[str, int, float]]:
+        return {"stream_id": self.stream_id, "total_processed": self.total_processed}
 
-
-# ==========================
-# SENSOR STREAM
-# ==========================
 
 class SensorStream(DataStream):
 
@@ -44,7 +29,7 @@ class SensorStream(DataStream):
         super().__init__(stream_id)
         self.avg_temp: float = 0.0
 
-    def process_batch(self, data_batch: List[Any]) -> str:
+    def process_batch(self, data_batch: list[any]) -> str:
         try:
             if not isinstance(data_batch, list):
                 raise ValueError("Invalid sensor batch")
@@ -68,15 +53,11 @@ class SensorStream(DataStream):
         except Exception as e:
             return f"Sensor processing error: {str(e)}"
 
-    def get_stats(self) -> Dict[str, Union[str, int, float]]:
+    def get_stats(self) -> dict[str, list[str, int, float]]:
         stats = super().get_stats()
         stats["avg_temp"] = self.avg_temp
         return stats
 
-
-# ==========================
-# TRANSACTION STREAM
-# ==========================
 
 class TransactionStream(DataStream):
 
@@ -84,7 +65,7 @@ class TransactionStream(DataStream):
         super().__init__(stream_id)
         self.net_flow: int = 0
 
-    def process_batch(self, data_batch: List[Any]) -> str:
+    def process_batch(self, data_batch: list[any]) -> str:
         try:
             if not isinstance(data_batch, list):
                 raise ValueError("Invalid transaction batch")
@@ -113,25 +94,18 @@ class TransactionStream(DataStream):
             return f"Transaction processing error: {str(e)}"
 
 
-# ==========================
-# EVENT STREAM
-# ==========================
-
 class EventStream(DataStream):
 
     def __init__(self, stream_id: str):
         super().__init__(stream_id)
         self.error_count: int = 0
 
-    def process_batch(self, data_batch: List[Any]) -> str:
+    def process_batch(self, data_batch: list[any]) -> str:
         try:
             if not isinstance(data_batch, list):
                 raise ValueError("Invalid event batch")
 
-            errors = [
-                event for event in data_batch
-                if "error" in event.lower()
-            ]
+            errors = [event for event in data_batch if "error" in event.lower()]
 
             self.error_count = len(errors)
             self.total_processed += len(data_batch)
@@ -144,23 +118,19 @@ class EventStream(DataStream):
         except Exception as e:
             return f"Event processing error: {str(e)}"
 
-    def get_stats(self) -> Dict[str, Union[str, int, float]]:
+    def get_stats(self) -> dict[str, list[str, int, float]]:
         stats = super().get_stats()
         stats["error_count"] = self.error_count
         return stats
 
-
-# ==========================
-# POLYMORPHIC STREAM MANAGER
-# ==========================
 
 class StreamProcessor:
 
     def process_stream(
         self,
         stream: DataStream,
-        data_batch: List[Any],
-        filter_criteria: Optional[str] = None
+        data_batch: list[any],
+        filter_criteria: list[str] = None,
     ) -> str:
 
         print(f"\nProcessing Stream: {stream.stream_id}")
@@ -171,10 +141,6 @@ class StreamProcessor:
 
         return result
 
-
-# ==========================
-# MAIN DEMO
-# ==========================
 
 def main():
     print("=== CODE NEXUS - POLYMORPHIC STREAM SYSTEM ===")
