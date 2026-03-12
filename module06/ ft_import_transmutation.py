@@ -12,7 +12,7 @@ def main():
     print(f"alchemy.elements.create_fire(): {create_fire()}")
 
     print("\nMethod 2 - Specific function import:")
-    print(f"create_water(): {create_water}")
+    print(f"create_water(): {create_water()}")
 
     print("\nMethod 3 - Aliased import:")
     print("heal(): ", heal())
