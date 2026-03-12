@@ -5,8 +5,8 @@ from ..potions import healing_potion as heal
 def philosophers_stone():
     return (
         f"Philosopher’s stone created using {lead_to_gold()} "
-        + f"and {heal()}"
-        )
+        + f" and that thing {heal()}"
+    )
 
 
 def elixir_of_life():

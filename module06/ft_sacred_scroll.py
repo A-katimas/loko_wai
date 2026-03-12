@@ -13,19 +13,19 @@ def main():
     print("\ntry not direct:")
     try:
         print(alchemy.create_air())
-    except:
+    except AttributeError:
         print("i can't")
     try:
         print(alchemy.create_fire())
-    except:
+    except AttributeError:
         print("i can't")
     try:
         print(alchemy.create_earth())
-    except:
+    except AttributeError:
         print("i can't")
     try:
         print(alchemy.create_water())
-    except:
+    except AttributeError:
         print("i can't")
 
     print("\n=== import potions ===")
