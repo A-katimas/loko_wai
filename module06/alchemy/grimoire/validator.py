@@ -1,3 +1,8 @@
-#• validate_ingredients(ingredients: str) -> str - Returns "[ingredients] - VALID" or "[ingredients] - INVALID"
-#• Simple validation: ingredients containing "fire", "water", "earth", or "air" are valid
-#• Any other ingredients are invalid
+def validate_ingredients(ingredients: str) -> str:
+    good_spell = {"fire": 0, "water": 0, "earth": 0, "air": 0}
+    try:
+        print(good_spell[ingredients])
+        return "[ingredients] - VALID"
+
+    except KeyError:
+        return "[ingredients] - INVALID"
