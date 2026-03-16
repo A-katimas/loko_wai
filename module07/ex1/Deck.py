@@ -29,12 +29,8 @@ class Deck:
 
     def get_deck_stats(self) -> dict:
         return {
-            "total cards": self.deck.count,
-            "creatures": len(
-                [e for e in self.deck if isinstance(e, CreatureCard)]
-            ),
-            "artifact": len(
-                [e for e in self.deck if isinstance(e, ArtifactCard)]
-            ),
-            "spell": len([e for e in self.deck if isinstance(e, SpellCard)]),
+            "total cards": len([e for e in self.deck if isinstance(e, Card)]),
+            "creatures": len([e for e in self.deck if isinstance(e, CreatureCard)]),
+            "artifact": len([e for e in self.deck if isinstance(e, ArtifactCard)]),
+             "spell": len([e for e in self.deck if isinstance(e, SpellCard)]),
         }
