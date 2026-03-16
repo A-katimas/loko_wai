@@ -1,5 +1,6 @@
 from ex0 import Card
-from . import ArtifactCard, SpellCard
+from ArtifactCard import ArtifactCard
+from SpellCard import Spellcard
 from ex0.CreatureCard import CreatureCard
 import random
 
@@ -32,5 +33,5 @@ class Deck:
             "total cards": len([e for e in self.deck if isinstance(e, Card)]),
             "creatures": len([e for e in self.deck if isinstance(e, CreatureCard)]),
             "artifact": len([e for e in self.deck if isinstance(e, ArtifactCard)]),
-             "spell": len([e for e in self.deck if isinstance(e, SpellCard)]),
+            "spell": len([e for e in self.deck if isinstance(e, Spellcard)]),
         }
