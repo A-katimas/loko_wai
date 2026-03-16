@@ -31,8 +31,8 @@ class EliteCard (Card, Combatable, Magical):
 
 
 
-    Combat phase:
-Attack result: {'attacker': 'Arcane Warrior', 'target': 'Enemy',
-'damage': 5, 'combat_type': 'melee'}
-Defense result: {'defender': 'Arcane Warrior', 'damage_taken': 2,
-'damage_blocked': 3, 'still_alive': True}
+#    Combat phase:
+#Attack result: {'attacker': 'Arcane Warrior', 'target': 'Enemy',
+#'damage': 5, 'combat_type': 'melee'}
+#Defense result: {'defender': 'Arcane Warrior', 'damage_taken': 2,
+#'damage_blocked': 3, 'still_alive': True}
