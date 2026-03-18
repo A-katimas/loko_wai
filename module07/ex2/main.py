@@ -1,10 +1,12 @@
-from EliteCard import EliteCard
+from .EliteCard import EliteCard
 from ex0.CreatureCard import CreatureCard
 
 mana = 10
 dragon = CreatureCard("dragon", 6, "legend", 15, 10)
 knight = CreatureCard("knight", 2, "comon", 2, 5)
-damonster = EliteCard("the arcane knighté ", 10, "legendary", 20, 10, "physical", 4, 10)
+damonster = EliteCard(
+    "the arcane knighté ", 10, "legendary", 20, 10, "physical", 4, 10
+)
 
 print("=== DataDeck Ability System ===\n")
 print("EliteCard capabilities:")

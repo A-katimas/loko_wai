@@ -1,7 +1,7 @@
 from ex0.CreatureCard import CreatureCard
-from ex1.ArtifactCard import ArtifactCard
-from ex1.SpellCard import Spellcard
-from ex1.Deck import Deck
+from .ArtifactCard import ArtifactCard
+from .SpellCard import Spellcard
+from .Deck import Deck
 
 dragoun = CreatureCard("dragoun", 3, "legendary", 4, 10)
 Spell = Spellcard("name", 1, "ma", "pioche")

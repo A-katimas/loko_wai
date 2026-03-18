@@ -1,4 +1,4 @@
-from CreatureCard import CreatureCard
+from .CreatureCard import CreatureCard
 
 
 def main():
@@ -16,7 +16,7 @@ def main():
     print("\nPlaying Fire Dragon with 6 mana available:")
     print("playabel :", dragon.is_playable(mana))
 
-    if dragon.is_playable(mana) == True:
+    if dragon.is_playable(mana):
         print("play result : ", dragon.play({"mana": mana}))
         mana -= dragon.cost
     print("Fire Dragon attacks knight:")
@@ -27,7 +27,7 @@ def main():
     print(knight.get_card_info())
 
     print("\nnew test ")
-    if dragon.is_playable(mana) == True:
+    if dragon.is_playable(mana):
         print("play result : ", dragon.play({"mana": mana}))
         mana -= dragon.cost
     else:

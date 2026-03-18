@@ -12,8 +12,9 @@ class Item:
 
     @classmethod
     def sort_item(cls) -> dict:
-        sorted_items = sorted(cls.list_item.items(),
-                              key=lambda x: x[1], reverse=True)
+        sorted_items = sorted(
+            cls.list_item.items(), key=lambda x: x[1], reverse=True
+        )
         return sorted_items
 
 
@@ -61,7 +62,8 @@ def main():
     for name, qty in Item.sort_item():
         percent = (
             (qty / inventory.total_items()) * 100
-            if inventory.total_items() > 0 else 0
+            if inventory.total_items() > 0
+            else 0
         )
         print(f"{name}: {qty} units ({percent:.1f}%)")
 
@@ -93,8 +95,10 @@ def main():
 
     print("=== Dictionary Properties Demo ===")
     print("Dictionary keys:", ", ".join(Item.list_item.keys()))
-    print("Dictionary values:",
-          ", ".join(str(v) for v in Item.list_item.values()))
+    print(
+        "Dictionary values:",
+        ", ".join(str(v) for v in Item.list_item.values()),
+    )
     print("Sample lookup - 'sword' in inventory:", "sword" in Item.list_item)
 
 

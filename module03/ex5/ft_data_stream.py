@@ -14,8 +14,10 @@ class Game_Even_Generator:
             player["lvl"] += level
             action = random.choice(event_tab)
             self.event[action] += 1
-            yield (f"Event {i}: Player {player["name"]} "
-                   f"(level {level}) {action}")
+            yield (
+                f"Event {i}: Player {player["name"]} "
+                f"(level {level}) {action}"
+            )
 
 
 def EventAnalyzer(event: str, action: dict) -> str:
