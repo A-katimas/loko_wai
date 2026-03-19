@@ -9,7 +9,9 @@ platform = TournamentPlatform()
 
 id1 = platform.register_card(card1)
 id2 = platform.register_card(card2)
-print(id2)
-platform.create_match(id1, id2)
+print(id1)
+print(platform.create_match(id1, id2))
 
-print(platform.get_leaderboard())
+# print(platform.get_leaderboard())
+
+# print(platform.create_match(id1, id2))
