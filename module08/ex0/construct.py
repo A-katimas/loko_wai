@@ -65,7 +65,7 @@ def main():
         print(YELLOW + "\nTo enter the construct, run:" + RESET)
         print(CYAN + "python -m venv matrix_env" + RESET)
 
-        if os.name == " ":
+        if os.name == "nt":
             print(CYAN + "matrix_env\\Scripts\\activate" + RESET)
         else:
             print(CYAN + "source matrix_env/bin/activate" + RESET)
