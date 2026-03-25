@@ -20,6 +20,7 @@ try:
     import matplotlib.pyplot as plt
 except ImportError:
     HAS_MATPLOTLIB = False
+
 # Couleurs
 GREEN = "\033[92m"
 RED = "\033[91m"
@@ -42,7 +43,7 @@ def check_package(name):
 def detect_environment():
     if os.path.exists("pyproject.toml"):
         print(CYAN + "Environment: Poetry (pyproject.toml detected)" + RESET)
-    elif os.path.exists("requirements.txt"):
+    if os.path.exists("requirements.txt"):
         print(CYAN + "Environment: pip (requirements.txt detected)" + RESET)
     else:
         print(YELLOW + "Environment: Unknown" + RESET)
@@ -56,9 +57,7 @@ def install_help():
 
 
 def main():
-    pand = pd
-    plot = plt
-    numb = np
+
     print(GREEN + "LOADING STATUS: Loading programs...\n" + RESET)
 
     detect_environment()
@@ -69,25 +68,28 @@ def main():
 
     if HAS_PANDAS:
         print(GREEN + "[OK] pandas" + RESET)
+        pand = pd
     else:
         print(RED + "[MISSING] pandas" + RESET)
         all_ok = False
+        pand = None
 
     if HAS_NUMPY:
         print(GREEN + "[OK] numpy" + RESET)
+        numb = np
     else:
         print(RED + "[MISSING] numpy" + RESET)
         all_ok = False
+        numb = None
 
     if HAS_MATPLOTLIB:
         print(GREEN + "[OK] matplotlib" + RESET)
+        plot = plt
     else:
         print(RED + "[MISSING] matplotlib" + RESET)
         all_ok = False
+        plot = None
 
-    if not all_ok:
-        print(GREEN + "Install dependencies" + RESET)
-        return
     if not all_ok:
         print(RED + "\nERROR: Missing dependencies." + RESET)
         install_help()

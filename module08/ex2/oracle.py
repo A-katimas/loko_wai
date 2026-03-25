@@ -1,5 +1,4 @@
 import os
-from dotenv import load_dotenv
 
 GREEN = "\033[92m"
 RED = "\033[91m"
@@ -7,15 +6,20 @@ CYAN = "\033[96m"
 YELLOW = "\033[93m"
 RESET = "\033[0m"
 
-# Charger .env si présent
-load_dotenv()
+try:
+    from dotenv import load_dotenv
 
-# Lecture des variables avec valeurs par défaut
+    load_dotenv()
+except ImportError:
+    print(YELLOW + "dotenv not installed" + RESET)
+
 MATRIX_MODE = os.getenv("MATRIX_MODE", "development")
 DATABASE_URL = os.getenv("DATABASE_URL", "missing")
 API_KEY = os.getenv("API_KEY", "missing")
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
 ZION_ENDPOINT = os.getenv("ZION_ENDPOINT", "missing")
+
+# Charger .env si présent
 
 
 def check_secrets():
@@ -42,7 +46,7 @@ def check_secrets():
 
 
 def main():
-    print("ORACLE STATUS: Reading the Matrix...\n")
+    print(CYAN + "ORACLE STATUS: Reading the Matrix...\n" + RESET)
 
     print("Configuration loaded:")
     print(f"Mode: {MATRIX_MODE}")
