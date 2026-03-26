@@ -10,7 +10,7 @@ def color(text: str, r: int, g: int, b: int) -> str:
 
 
 try:
-    from pydantic import Field, BaseModel, ValidationError, model_validator
+    from pydantic import Field, BaseModel, model_validator
 
 except ImportError:
     print(color("Pydantic not installed", 255, 255, 0))
@@ -109,11 +109,11 @@ def main():
     print(color("=" * 40, 100, 100, 100))
     try:
         human = Contact(
-            contact_id="AC_2024_002",
+            contact_id="_2024_002",
             timestamp=datetime.now(),
             location="Mars Colony",
-            contact_type="physical",
-            signal_strength=8.0,
+            contact_type="telepathic",
+            signal_strength=6.0,
             duration_minutes=30,
             witness_count=1,
         )
