@@ -67,7 +67,6 @@ def main():
     print(memo["recall"]("andive"))
     print(memo["recall"]("wouf"))
     print(memo["recall"]("chien"))
-    
 
 
 if __name__ == "__main__":
