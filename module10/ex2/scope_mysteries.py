@@ -17,7 +17,6 @@ def spell_accumulator(initial_power: int) -> Callable:
     accumulation = init_power
 
     def accumulator(more: int) -> str:
-        nonlocal init_power
         nonlocal accumulation
         accumulation += more
         return f"Base {init_power}, add {more}: {accumulation}"

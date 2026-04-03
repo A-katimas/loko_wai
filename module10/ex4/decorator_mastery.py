@@ -44,7 +44,10 @@ def retry_spell(max_attempts: int) -> Callable:
                             f"Spell failed, retrying... ({i}/{max_attempts})"
                         )
                     else:
-                        return f"Spell casting failed after {max_attempts} attempts"
+                        return (
+                            f"Spell casting failed after {max_attempts}",
+                            " attempts",
+                        )
 
         return wrapper
 

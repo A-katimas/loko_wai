@@ -92,5 +92,6 @@ def main():
     print(b["ice"]())
     print(b["lightning"](power=100))
 
+
 if __name__ == "__main__":
     main()
